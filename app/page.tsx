@@ -81,6 +81,15 @@ export default function Home() {
       >
         Contacta-me
       </a>
+      <a
+        href="/CV-Rafael-Antunes.pdf"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#b6b7be] text-white hover:bg-[#9899a0] transition mt-6"
+        download
+      >
+        Download CV  
+
+      </a>
+
     </div>
 
     {/* Foto à direita */}
