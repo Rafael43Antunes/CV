@@ -1,8 +1,9 @@
-
+import FadeIn from "./fade-in";
 
 export default function Education() {
     return (
         <section id="education" className="relative">
+            <FadeIn>
             <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
                     Education
@@ -25,6 +26,7 @@ export default function Education() {
                     </div>
                 </div>
             </div>
+            </FadeIn>
         </section>
     );
 }

@@ -1,3 +1,4 @@
+import HeroPhoto from "./hero-photo";
 import  About  from "./about";
 import Education from "./education";
 import Skills from "./skills";
@@ -9,16 +10,16 @@ export default function Home() {
   return (
     <main className="flex min-h-screen">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-b border-zinc-200">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur border-b border-border">
         <div className="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
           <a href="#home" className="font-semibold tracking-tight">Rafael José Oliveira Antunes</a>
           <nav className="hidden md:flex items-center gap-3 text-sm">
-            <a href="#home" className="px-3 py-2 rounded-lg hover:bg-zinc-100">Home</a>
-            <a href="#about" className="px-3 py-2 rounded-lg hover:bg-zinc-100">About</a>
-            <a href="#education" className="px-3 py-2 rounded-lg hover:bg-zinc-100">Education</a>
-            <a href="#skills" className="px-3 py-2 rounded-lg hover:bg-zinc-100">Skills</a>
-            <a href="#portfolio" className="px-3 py-2 rounded-lg hover:bg-zinc-100">Portfolio</a>
-            <a href="#contact" className="px-3 py-2 rounded-lg hover:bg-zinc-100">Contact</a>
+            <a href="#home" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">Home</a>
+            <a href="#about" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">About</a>
+            <a href="#education" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">Education</a>
+            <a href="#skills" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">Skills</a>
+            <a href="#portfolio" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">Portfolio</a>
+            <a href="#contact" className="px-3 py-2 rounded-lg hover:bg-accent-light hover:text-accent transition">Contact</a>
           </nav>
         </div>
       </header>
@@ -33,7 +34,7 @@ export default function Home() {
       <a
         href="https://github.com/Rafael43Antunes"
         aria-label="GitHub"
-        className="p-2 rounded-lg border border-zinc-200 hover:bg-zinc-100 transition"
+        className="p-2 rounded-lg border border-border hover:bg-accent-light hover:border-accent transition"
         target="_blank" rel="noopener noreferrer"
         title="GitHub"
       >
@@ -44,7 +45,7 @@ export default function Home() {
       <a
         href="https://www.linkedin.com/in/rafaelantunes43/"
         aria-label="LinkedIn"
-        className="p-2 rounded-lg border border-zinc-200 hover:bg-zinc-100 transition"
+        className="p-2 rounded-lg border border-border hover:bg-accent-light hover:border-accent transition"
         target="_blank" rel="noopener noreferrer"
         title="LinkedIn"
       >
@@ -55,7 +56,7 @@ export default function Home() {
       <a
         href="https://www.instagram.com/_rafael__antunes_/"
         aria-label="Instagram"
-        className="p-2 rounded-lg border border-zinc-200 hover:bg-zinc-100 transition"
+        className="p-2 rounded-lg border border-border hover:bg-accent-light hover:border-accent transition"
         target="_blank" rel="noopener noreferrer"
         title="Instagram"
       >
@@ -77,13 +78,13 @@ export default function Home() {
       </p>
       <a
         href="#contact"
-        className="mt-6 inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-zinc-800 transition"
+        className="mt-6 inline-block px-6 py-3 bg-accent text-white rounded-full hover:bg-accent-hover transition"
       >
         Contacta-me
       </a>
       <a
         href="/CV-Rafael-Antunes.pdf"
-        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#b6b7be] text-white hover:bg-[#9899a0] transition mt-6"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-white transition mt-6"
         download
       >
         Download CV  
@@ -93,43 +94,7 @@ export default function Home() {
     </div>
 
     {/* Foto à direita */}
-    <div className="flex-none w-64 h-64 md:w-[420px] md:h-[420px] md:ml-6">
-      <svg viewBox="0 0 300 300" className="w-full h-full">
-        <defs>
-          <clipPath id="blobClip">
-            <path>
-              <animate
-                attributeName="d"
-                dur="10s"
-                repeatCount="indefinite"
-                values="M231,178.5Q213,207,189.5,231.5Q166,256,132,248.5Q98,241,78,213.5Q58,186,46,154.5Q34,123,55,97.5Q76,72,103.5,53.5Q131,35,162.5,46Q194,57,216.5,82.5Q239,108,241.5,139.5Q244,171,231,178.5Z;
-                        M233,169.5Q219,199,195,221Q171,243,139,243.5Q107,244,81,222Q55,200,50,166Q45,132,62.5,104Q80,76,108,61.5Q136,47,166,57.5Q196,68,218,92.5Q240,117,240,149.5Q240,182,233,169.5Z;
-                        M234,170Q224,205,196.5,226.5Q169,248,135.5,243Q102,238,77,213Q52,188,43.5,155Q35,122,50.5,95Q66,68,93,52.5Q120,37,154,45.5Q188,54,209,80.5Q230,107,236,138.5Q242,170,234,170Z;
-                        M231,178.5Q213,207,189.5,231.5Q166,256,132,248.5Q98,241,78,213.5Q58,186,46,154.5Q34,123,55,97.5Q76,72,103.5,53.5Q131,35,162.5,46Q194,57,216.5,82.5Q239,108,241.5,139.5Q244,171,231,178.5Z"
-              />
-            </path>
-          </clipPath>
-        </defs>
-        <image
-          href="/eu.jpg"
-          width="300"
-          height="300"
-          preserveAspectRatio="xMidYMid slice"
-          clipPath="url(#blobClip)"
-        />
-        <path fill="none" stroke="#9CA3AF" strokeWidth="8">
-          <animate
-            attributeName="d"
-            dur="10s"
-            repeatCount="indefinite"
-            values="M231,178.5Q213,207,189.5,231.5Q166,256,132,248.5Q98,241,78,213.5Q58,186,46,154.5Q34,123,55,97.5Q76,72,103.5,53.5Q131,35,162.5,46Q194,57,216.5,82.5Q239,108,241.5,139.5Q244,171,231,178.5Z;
-                    M233,169.5Q219,199,195,221Q171,243,139,243.5Q107,244,81,222Q55,200,50,166Q45,132,62.5,104Q80,76,108,61.5Q136,47,166,57.5Q196,68,218,92.5Q240,117,240,149.5Q240,182,233,169.5Z;
-                    M234,170Q224,205,196.5,226.5Q169,248,135.5,243Q102,238,77,213Q52,188,43.5,155Q35,122,50.5,95Q66,68,93,52.5Q120,37,154,45.5Q188,54,209,80.5Q230,107,236,138.5Q242,170,234,170Z;
-                    M231,178.5Q213,207,189.5,231.5Q166,256,132,248.5Q98,241,78,213.5Q58,186,46,154.5Q34,123,55,97.5Q76,72,103.5,53.5Q131,35,162.5,46Q194,57,216.5,82.5Q239,108,241.5,139.5Q244,171,231,178.5Z"
-          />
-        </path>
-      </svg>
-    </div>
+    <HeroPhoto />
   </div>
 </section>
 
@@ -145,6 +110,8 @@ export default function Home() {
 
       {/* Education */}
       <Education />
+      
+      
 
 
       {/* Skills */}
@@ -156,17 +123,21 @@ export default function Home() {
         ))}
         </ul>
       </section>*/}
+      
       <Skills />
-
+      
 
       {/* Portfolio */}
       {/*<section id="portfolio" className="scroll-mt-24 py-10 border-t border-zinc-200">
         <h2 className="text-xl md:text-2xl font-semibold">Portfolio</h2>
         <p className="mt-2 text-zinc-700">Aqui vão entrar os teus projetos (cards simples).</p>
       </section>*/}
+      
       <Portofolio />
-
+      
+      
       <Contact />
+      
 
         
     </div>

@@ -1,8 +1,9 @@
-
+import FadeIn from "./fade-in";
 
 export default function Portofolio() {
     return (
         <section id="portfolio" className="relative">
+            <FadeIn>
             <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
                     Portfolio
@@ -11,6 +12,7 @@ export default function Portofolio() {
                     Estou a preparar alguns projetos para partilhar aqui mais tarde. 
                 </p>
             </div>
+            </FadeIn>
         </section>
     );
 }

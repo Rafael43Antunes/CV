@@ -1,10 +1,12 @@
 "use client";
 import { on } from "events";
 import { useEffect, useRef, useState } from "react";
+import FadeIn from "./fade-in";
 
 export default function About() {
     return (
         <section id="about" className="relative">
+          <FadeIn>
           <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
               <h2
               className="text-center text-3xl  md:text-4xl font-extrabold tracking-tight"
@@ -47,7 +49,7 @@ export default function About() {
                 </div>
               </div>
             </div>   
-
+          </FadeIn>
         </section>
 
     );     
