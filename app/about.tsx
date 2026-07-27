@@ -27,7 +27,7 @@ export default function About() {
                 {/* Texto à direita */}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-2xl md:text-3xl font-semibold">
-                    Olá! Eu sou o Rafael Antunes.
+                    Hello, I'm Rafael Antunes.
                   </h3>
                   <p className="mt-3 text-zinc-700 leading-relaxed">
                     I'm a <strong>Computer Science and Engineering</strong>{" "}
