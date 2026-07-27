@@ -117,7 +117,7 @@ function SkillCard({
   );
 }
 
-function Badge({ label, href }: { label: string; highlight?: boolean }) {
+function Badge({ label, href }: { label: string; href?: string }) {
   return (
     <a
       href={href}
