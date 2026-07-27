@@ -3,23 +3,23 @@ import FadeIn from "./fade-in";
 export default function Contact() {
     return (
         <section id="contact" className="relative">
-            <FadeIn>
+          <FadeIn>
             <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
                     Contact
                 </h2>
                 <p className="mt-4 text-center text-zinc-600">
-                    Interessado em falar comigo? Escolhe a forma que preferires:
+                    Interested in reaching out? Pick whichever works best for you:
                 </p>
 
-                <div className="mt-10 flex flex-col sm:flex-row justify-center gap-20">
+                <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 sm:gap-20">
                     {/* WhatsApp */}
                     <a
                         href="https://wa.me/351918962172"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Contactar via WhatsApp"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-green-500 text-white hover:bg-green-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500/40"
+                        aria-label="Contact via WhatsApp"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-green-500 text-white transition-all duration-300 hover:bg-green-600 hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500/40"
                     >
                         <svg
                             role="img"
@@ -36,8 +36,8 @@ export default function Contact() {
                     {/* Email */}
                     <a
                         href="mailto:rafa.oliveiraantunes@gmail.com"
-                        aria-label="Contactar por Email"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black text-white hover:bg-zinc-800 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-black/40"
+                        aria-label="Contact via Email"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-white transition-all duration-300 hover:bg-accent-hover hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-black/40"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function Contact() {
                     </a>
                 </div>
              </div>
-             </FadeIn>
+          </FadeIn>
         </section>
     );
 }

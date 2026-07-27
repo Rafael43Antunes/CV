@@ -1,4 +1,32 @@
 import FadeIn from "./fade-in";
+import { Code2, Cloud, Network, Server, Database } from "lucide-react";
+
+
+const links: Record<string, string> = {
+  "C": "https://en.cppreference.com/w/c",
+  "C++": "https://en.cppreference.com/w/cpp",
+  "C#": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+  "Python": "https://www.python.org/",
+  "JavaScript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  "Docker": "https://www.docker.com/",
+  "Kubernetes": "https://kubernetes.io/",
+  "Git": "https://git-scm.com/",
+  "GitLab CI/CD": "https://docs.gitlab.com/ee/ci/",
+  "Helm": "https://helm.sh/",
+  "Trivy": "https://trivy.dev/",
+  "Cisco IOS": "https://www.cisco.com/",
+  "pfSense": "https://www.pfsense.org/",
+  "Proxmox VE": "https://www.proxmox.com/",
+  "TrueNAS": "https://www.truenas.com/",
+  "GNS3": "https://www.gns3.com/",
+  "VLANs": "https://en.wikipedia.org/wiki/VLAN",
+  "Wireshark": "https://www.wireshark.org/",
+  "Linux": "https://www.linux.org/",
+  "Windows Server": "https://www.microsoft.com/en-us/windows-server",
+  "GitHub": "https://github.com/",
+  "SQL": "https://en.wikipedia.org/wiki/SQL",
+};
+
 
 export default function Skills() {
     return (
@@ -10,36 +38,40 @@ export default function Skills() {
                 </h2>
 
                 <p className="mt-3 text-center text-zinc-600">
-                    Tecnologias e ferramentas que já utilizei.
+                    Technologies and tools I've worked with.
                 </p>
 
-                <div className="mt-12 grid gap-8 md:grid-cols-2">
+                <div className="mt-12 grid gap-6 md:grid-cols-2">
 
-                    {/* Linguagens */}
-                    <SkillCard title="Linguagens">
-                        {["C", "C++", "JavaScript", "SQL"].map(s => (
-                            <Badge key={s} label={s} />
+                    <SkillCard title="Programming" icon={<Code2 className="w-5 h-5" />}>
+                        {["C", "C++", "C#", "Python", "JavaScript"].map(s => (
+                            <Badge key={s} label={s} href={links[s]} />
                         ))}
                     </SkillCard>
 
-                    {/* Frontend */}
-                    <SkillCard title="Frontend">
-                        {["HTML", "CSS", "Tailwind CSS", "Next.js"].map(s => (
-                            <Badge key={s} label={s} />
+                    <SkillCard title="DevOps & Cloud" icon={<Cloud className="w-5 h-5" />}>
+                        {["Docker", "Kubernetes", "Git", "GitLab CI/CD", "Helm", "Trivy"].map(s => (
+                            <Badge key={s} label={s} href={links[s]}/>
                         ))}
                     </SkillCard>
 
-                    <SkillCard title="Sistemas">
-                        {["Linux", "Git", "GitHub"].map(s => (
-                            <Badge key={s} label={s} />
+                    <SkillCard title="Networking & Infrastructure" icon={<Network className="w-5 h-5" />}>
+                        {["Cisco IOS", "pfSense", "Proxmox VE", "TrueNAS", "GNS3", "VLANs", "Wireshark"].map(s => (
+                            <Badge key={s} label={s} href={links[s]}/>
                         ))}
                     </SkillCard>
 
-                    <SkillCard title="Redes">
-                        {["Cisco IOS", "GNS3", "Subnneting", "VLANs", "Wireshark"].map(s => (
-                            <Badge key={s} label={s} />
+                    <SkillCard title="Systems & Tools" icon={<Server className="w-5 h-5" />}>
+                        {["Linux", "Windows Server", "GitHub"].map(s => (
+                            <Badge key={s} label={s} href={links[s]}/>
                         ))}
                     </SkillCard>
+
+                    <SkillCard title="Databases" icon={<Database className="w-5 h-5" />}>
+                       {["SQL"].map(s => (
+                           <Badge key={s} label={s} href={links[s]}/>
+                       ))}
+                   </SkillCard>
 
                 </div>   
             </div>
@@ -49,19 +81,52 @@ export default function Skills() {
 }
 
 
-function SkillCard({ title, children }: { title: string; children: React.ReactNode }) {
+function SkillCard({
+    title,
+    icon,
+    children,
+    highlight = false,
+}: {
+    title: string;
+    icon: React.ReactNode;
+    children: React.ReactNode;
+    highlight?: boolean;
+}) {
     return (
-        <div className="border border-zinc-200 rounded-2xl p-5">
-            <h3 className="text-lg font-semibold">{title}</h3>
+        <div
+            className={`group rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                highlight
+                    ? "border-accent/30 bg-accent-light/40 hover:border-accent"
+                    : "border-border bg-white hover:border-accent/50"
+            }`}
+        >
+            <div className="flex items-center gap-3">
+                <span
+                    className={`flex items-center justify-center w-9 h-9 rounded-lg transition-colors ${
+                        highlight
+                            ? "bg-accent text-white"
+                            : "bg-surface-alt text-text-muted group-hover:bg-accent-light group-hover:text-accent"
+                    }`}
+                >
+                    {icon}
+                </span>
+                <h3 className="text-lg font-semibold">{title}</h3>
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">{children}</div>
         </div>
   );
 }
 
-function Badge({ label }: { label: string }) {
+function Badge({ label, href }: { label: string; highlight?: boolean }) {
   return (
-    <span className="px-3 py-1 text-sm border border-zinc-200 rounded-full">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-3 py-1 text-sm rounded-full border border-border text-text-muted transition-colors hover:border-accent hover:text-accent cursor-pointer"
+    >
       {label}
-    </span>
+    </a>
   );
 }
+

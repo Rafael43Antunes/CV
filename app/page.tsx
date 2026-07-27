@@ -83,7 +83,7 @@ export default function Home() {
         Get in touch
       </a>
       <a
-        href="/CV-Rafael-Antunes.pdf"
+        href="/CV_Rafael_Antunes.pdf"
         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-white transition mt-6"
         download
       >
