@@ -30,21 +30,33 @@ export default function About() {
                     Olá! Eu sou o Rafael Antunes.
                   </h3>
                   <p className="mt-3 text-zinc-700 leading-relaxed">
-                    Sou finalista de <strong>Engenharia Informática</strong>
-                    &nbsp;(ISEC) e estou à procura de um{" "}
-                    <strong>estágio curricular</strong> onde possa aplicar o que
-                    aprendi e continuar a crescer.
+                    I'm a <strong>Computer Science and Engineering</strong>{" "}
+                    graduate from ISEC - Coimbra, specializing in Networks and
+                    Systems Administration. I recently completed a{" "}
+                    <strong>curricular internship in DevOps</strong>, working
+                    with CI/CD pipelines, Kubernetes and cloud-native
+                    infrastructure.
                   </p>
                   <p className="mt-3 text-zinc-700 leading-relaxed">
-                    Para além da área académica, gosto de{" "}
-                    <strong>jogar</strong>, <strong>ler</strong>,{" "}
-                    <strong>viajar</strong>, <strong>ver filmes</strong> e
-                    praticar <strong>desporto</strong>. Sou jogador de <strong>hóquei</strong>, atividade que 
-                    me ensinou disciplina, resiliência e trabalho de equipa. 
+                    I'm now looking for my first professional opportunity as a{" "}
+                    <strong>Software Engineer</strong> - open to different
+                    areas, from DevOps and cloud infrastructure to security and 
+                    networking. I'm also curious about {" "} 
+                    <strong> AI and Data Science </strong>, and eager to explore 
+                    new fields to discover where my interests truly lie.
+                  </p> 
+                  <p className="mt-3 text-zinc-700 leading-relaxed">
+                    Outside of academics, I enjoy <strong>gaming</strong>,{" "}
+                    <strong>reading</strong>, <strong>traveling</strong>,{" "}
+                    <strong>watching movies</strong> and{" "}
+                    <strong>playing sports</strong>. I play{" "}
+                    <strong>roller hockey</strong>, which has taught me
+                    discipline, resilience and teamwork. 
                   </p>
                   <p className="mt-3 text-zinc-700">
-                    Procuro desafios onde possa unir <strong>criatividade</strong> e{" "}
-                    <strong>lógica</strong> para construir soluções com impacto.
+                    I look for challenges where I can combine{" "}
+                    <strong>creativity</strong> and <strong>logic</strong> to
+                    build solutions with real impact.
                   </p>
                 </div>
               </div>

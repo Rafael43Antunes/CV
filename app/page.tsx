@@ -71,16 +71,16 @@ export default function Home() {
     {/* Texto à esquerda */}
     <div className="flex-1 min-w-0 max-w-[38rem] pl-20">
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-        Olá,&nbsp;👋 <br /> sou o Rafa.
+        Hi,&nbsp;👋 <br /> I'm Rafa.
       </h1>
-      <p className="mt-4 text-lg text-zinc-600">
-        Finalista em Engenharia Informática
+      <p className="mt-4 text-lg text-text-muted">
+        Software Engineer Graduate
       </p>
       <a
         href="#contact"
         className="mt-6 inline-block px-6 py-3 bg-accent text-white rounded-full hover:bg-accent-hover transition"
       >
-        Contacta-me
+        Get in touch
       </a>
       <a
         href="/CV-Rafael-Antunes.pdf"

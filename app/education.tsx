@@ -10,18 +10,18 @@ export default function Education() {
                 </h2>
 
                 <div className="mt-12 flex flex-col items-center md:items-start gap-6">
-                    <div className="w-full border-l-2 border-zinc-200 pl-6">
+                    <div className="w-full border-l-2 border-border pl-6">
                         <h3 className="text-xl md:text-2xl font-semibold">
                             Instituto Superior de Engenharia de Coimbra (ISEC)
                         </h3>
                         <p className="mt-1 text-zinc-700">
-                            Licenciatura em <strong>Engenharia Informática</strong>
+                            Bachelor's Degree in <strong>Computer Science and Engineering</strong>
                         </p>
                         <p className="mt-1 text-zinc-600">
-                            2022 - Present
+                            2022 - 2026
                         </p>
                         <p className="mt-2 text-zinc-700">
-                            Ramo de <strong>Redes e Admistração de Sistemas</strong>
+                            Specialization in <strong>Networks and Systems Administration</strong>
                         </p>
                     </div>
                 </div>

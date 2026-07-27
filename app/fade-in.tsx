@@ -9,29 +9,53 @@ export default function FadeIn({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    function updateOpacity(){
+      const el = ref.current;
+      if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: "-10% 0px -10% 0px" }
-    );
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const center = rect.top + rect.height / 2;
 
-    observer.observe(el);
-    return () => observer.disconnect();
+      const scrolledToBottom =
+       window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+
+       if(scrolledToBottom && rect.top < vh) {
+          setOpacity(1);
+          return;
+        }
+
+      // distância do centro da secção ao centro do ecrã, normalizada
+      const distanceFromCenter = Math.abs(center - vh / 2);
+      const fadeZone = vh * 0.7; // quanto maior, mais "aberta" é a zona visível
+
+      const raw = 1 - distanceFromCenter / fadeZone;
+      const clamped = Math.min(Math.max(raw, 0), 1);
+
+      setOpacity(clamped);
+    }
+    
+    window.addEventListener("scroll", updateOpacity, {passive: true});
+    window.addEventListener("resize", updateOpacity);
+    updateOpacity();
+
+    return () => {
+        window.removeEventListener("scroll", updateOpacity);
+        window.removeEventListener("resize", updateOpacity);
+    }
   }, []);
 
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ease-out ${
-        visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"
-      } ${className}`}
+      className={`transition-opacity duration-300 ease-out ${className}`}
+      style={{
+        opacity,
+        transform: `translateY(${(1 - opacity) * 40}px) scale(${0.95 + opacity * 0.05})`,
+      }}
     >
       {children}
     </div>
