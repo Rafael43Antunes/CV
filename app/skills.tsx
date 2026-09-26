@@ -1,5 +1,6 @@
 import FadeIn from "./fade-in";
 import { Code2, Cloud, Network, Server, Database } from "lucide-react";
+import { useLanguage } from "./language";
 
 
 const links: Record<string, string> = {
@@ -29,16 +30,17 @@ const links: Record<string, string> = {
 
 
 export default function Skills() {
+    const { t } = useLanguage();
     return (
         <section id="skills" className="relative">
             <FadeIn>
             <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
-                    Skills
+                    {t('skills.title')}
                 </h2>
 
                 <p className="mt-3 text-center text-zinc-600">
-                    Technologies and tools I've worked with.
+                    {t('skills.subtitle')}
                 </p>
 
                 <div className="mt-12 grid gap-6 md:grid-cols-2">

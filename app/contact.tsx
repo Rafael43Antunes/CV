@@ -1,15 +1,17 @@
 import FadeIn from "./fade-in";
+import { useLanguage } from "./language";
 
 export default function Contact() {
+    const { t } = useLanguage();
     return (
         <section id="contact" className="relative">
           <FadeIn>
             <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
-                    Contact
+                    {t('contact.title')}
                 </h2>
                 <p className="mt-4 text-center text-zinc-600">
-                    Interested in reaching out? Pick whichever works best for you:
+                    {t('contact.subtitle')}
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 sm:gap-20">
