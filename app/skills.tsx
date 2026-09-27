@@ -1,5 +1,5 @@
 import FadeIn from "./fade-in";
-import { Code2, Cloud, Network, Server, Database } from "lucide-react";
+import { Code2, Cloud, Network, Server, Database, Globe } from "lucide-react";
 import { useLanguage } from "./language";
 
 
@@ -26,6 +26,10 @@ const links: Record<string, string> = {
   "Windows Server": "https://www.microsoft.com/en-us/windows-server",
   "GitHub": "https://github.com/",
   "SQL": "https://en.wikipedia.org/wiki/SQL",
+  "Next.js": "https://nextjs.org/",
+  "React": "https://react.dev/",
+  "Django": "https://www.djangoproject.com/",
+  "Tailwind CSS": "https://tailwindcss.com/",
 };
 
 
@@ -48,6 +52,12 @@ export default function Skills() {
                     <SkillCard title="Programming" icon={<Code2 className="w-5 h-5" />}>
                         {["C", "C++", "C#", "Python", "JavaScript"].map(s => (
                             <Badge key={s} label={s} href={links[s]} />
+                        ))}
+                    </SkillCard>
+
+                    <SkillCard title="Web Development" icon={<Globe className="w-5 h-5" />}>
+                        {["Next.js", "React", "Django", "Tailwind CSS"].map(s => (
+                            <Badge key={s} label={s} href={links[s]}/>
                         ))}
                     </SkillCard>
 

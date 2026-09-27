@@ -60,7 +60,7 @@ export default function Portofolio() {
                     {project.techStack.map((tech) => (
                       <span 
                         key={tech} 
-                        className="inline-flex items-center rounded-md bg-zinc-100 dark:bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-300"
+                        className="px-3 py-1 text-sm rounded-full border border-border text-text-muted cursor-default"
                       >
                         {tech}
                       </span>
