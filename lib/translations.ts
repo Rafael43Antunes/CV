@@ -54,6 +54,12 @@ export const translations = {
           description: "Desktop utility that automates file organization for sports photography. It extracts structured data from official PDFs (starting orders) and instantly generates the directory tree by category and athlete asynchronously.",
           techStack: ["Python", "CustomTkinter", "pdfplumber", "Multithreading"], 
           github: "https://github.com/Rafael43Antunes/folder-generator",
+        },
+        {
+          title: "TMFoto App",
+          description: "Desktop automation application built to streamline photo selection, packaging, and link distribution for a sports photography business. It automatically generates folders ordered by event category and athlete name, utilizing cloud storage for seamless delivery.",
+          techStack: ["React", "Tailwind CSS", "Electron", "Python", "SQLite"],
+          github: "https://github.com/Rafael43Antunes/TMFoto-App",
         }
       ]
     },
@@ -116,6 +122,12 @@ export const translations = {
           description: "Utilitário desktop que automatiza a organização de ficheiros para fotografia desportiva. Extrai dados estruturados de PDFs oficiais (ordens de partida) e gera instantaneamente a árvore de diretórios por categoria e atleta de forma assíncrona.",
           techStack: ["Python", "CustomTkinter", "pdfplumber", "Multithreading"], 
           github: "https://github.com/Rafael43Antunes/folder-generator",
+        },
+        {
+          title: "TMFoto App",
+          description: "Aplicação desktop de automação construída para simplificar a seleção, empacotamento e distribuição de links de fotografias para um negócio de fotografia desportiva. Gera automaticamente pastas ordenadas por categoria e nome do atleta, utilizando armazenamento cloud para uma entrega eficiente.",
+          techStack: ["React", "Tailwind CSS", "Electron", "Python", "SQLite"],
+          github: "https://github.com/Rafael43Antunes/TMFoto-App",
         }
       ]
     },

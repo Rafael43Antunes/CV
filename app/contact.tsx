@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <section id="contact" className="relative">
           <FadeIn>
-            <div className="mx-auto max-w-4xl px-4 py-24 md:py-24">
+            <div className="mx-auto max-w-4xl px-4 py-12 md:py-24">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
                     {t('contact.title')}
                 </h2>

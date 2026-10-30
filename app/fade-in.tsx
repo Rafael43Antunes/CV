@@ -30,9 +30,15 @@ export default function FadeIn({
 
       // distância do centro da secção ao centro do ecrã, normalizada
       const distanceFromCenter = Math.abs(center - vh / 2);
-      const fadeZone = vh * 0.7; // quanto maior, mais "aberta" é a zona visível
 
-      const raw = 1 - distanceFromCenter / fadeZone;
+      const safeZone = vh * 0.35;
+      const fadeDistance = vh * 0.15;
+      //const fadeZone = vh * 0.7; // quanto maior, mais "aberta" é a zona visível
+
+      let raw = 1;
+      if (distanceFromCenter > safeZone) {
+        raw = 1 - ((distanceFromCenter - safeZone) / fadeDistance);
+      }
       const clamped = Math.min(Math.max(raw, 0), 1);
 
       setOpacity(clamped);
